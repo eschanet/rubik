@@ -1,6 +1,6 @@
 # Overview
 
-This is a Python 3 implementation of a (3x3) Rubik's cube solver.
+This is a Python 3 implementation of a 3x3 Rubik's cube solver.
 
 ## Usage
 
@@ -23,14 +23,14 @@ YYY WWW GGG BBB
 
 ### Piece
 
-The cornerstone of this implementation is the piece class. A piece stores two pieces of information:
+The basis of this implementation is the piece class. A piece stores two pieces of information:
 
 1. An integer `position` vector `(x, y, z)` where each component is in {-1, 0,
 1}:
-    - `(0, 0, 0)` is the center of the cube
-    - the positive x-axis points to the right face
-    - the positive y-axis points to the up face
-    - the positive z-axis points to the front face
+    * `(0, 0, 0)` is the center of the cube
+    * the positive x-axis points to the right face
+    * the positive y-axis points to the up face
+    * the positive z-axis points to the front face
 
 2. A `colors` vector `(cx, cy, cz)`, giving the color of the sticker along each axis. For example, a piece with `colors=('Orange', None, 'Red')` is an edge piece with an `'Orange'` sticker facing the x-direction and a `'Red'` sticker facing the z-direction. The piece doesn't know or care which direction along the x-axis the `'Orange'` sticker is facing, just that it is facing in the x-direction and not the y- or z- directions.
 
